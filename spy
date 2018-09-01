@@ -1,7 +1,12 @@
 exec common.cfg
 
-//fast disguise
+echo common loaded
 
+
+bind p "say_team << Sentry sapped, PUSH ! >>"
+
+
+// fast disguise
 alias e_scout "disguise 1 -1; play vo\scout_yes01"
 alias e_sniper "disguise 2 -1; play vo\sniper_yes03"
 alias e_soldier "disguise 3 -1; play vo\soldier_yes04"
@@ -32,17 +37,17 @@ bind f7 e_medic
 bind f8 e_sniper
 bind f9 e_spy
 bind f10 drop_disg
-alias drop_disg "disguise 8 -2" // instantly removes disguise
+alias drop_disg "disguise 8 -2"// instantly removes disguise
 
 alias +f_disg "bind f1 a_scout; bind f2 a_soldier; bind f3 a_pyro; bind f4 a_demoman; bind f5 a_hwguy; bind f6 a_engineer; bind f7 a_medic; bind f8 a_sniper; bind f9 a_spy"
 alias -f_disg "bind f1 e_scout; bind f2 e_soldier; bind f3 e_pyro; bind f4 e_demoman; bind f5 e_hwguy; bind f6 e_engineer; bind f7 e_medic; bind f8 e_sniper; bind f9 e_spy"
 
-bind t +f_disg
+bind t +f_disg	// pressing "t" while disguising disguises as friendly class
 
 
-//fov toggle script by DrFrank
-//mode 1 -> switching to revolver hides it and reduces fov; reverts to normal on switching weapon
-//mode 2 -> switching to any weapon retains normal fov and always shows weapon
+//  fov toggle script by Fx3
+//  mode 1 -> switching to revolver hides it and reduces fov; reverts to normal on switching weapon
+//  mode 2 -> switching to any weapon retains normal fov and always shows weapon
 
 alias zoom "fovsmall"
 alias fovsmall "r_drawviewmodel 1; fov_desired 75; small1; small2; small3; small4; alias zoom fovbig"
@@ -68,7 +73,3 @@ alias defaultrevolver "slot1; fov_desired 90; r_drawviewmodel 1"
 alias defaultsapper "slot2; fov_desired 90; r_drawviewmodel 1"
 alias defaultknife "slot3; fov_desired 90; r_drawviewmodel 1"
 alias defaultdisguisekit "slot4; fov_desired 90; r_drawviewmodel 1"
-
-
-// bind "mouse3" ""
-bind p "say_team << Sentry sapped, PUSH ! >>"
