@@ -1,0 +1,5 @@
+exec common.cfg
+
+bind "t" "+reload"
+
+bind p "say_team << Medic/Sentry down -> PUSH / DEFEND ! >>"
