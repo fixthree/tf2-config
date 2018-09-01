@@ -1,5 +1,9 @@
 exec common.cfg
 
+echo common loaded
+
+
 bind p "say << Sentry down PUSH ! >>"
 
-// bind t "say << I like shotguns >>"
+
+echo soldier config loaded
