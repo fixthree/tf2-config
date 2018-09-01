@@ -1,5 +1,11 @@
 exec common.cfg
 
-bind "t" "+reload"
+echo common loaded
+
 
 bind p "say_team << Medic/Sentry down -> PUSH / DEFEND ! >>"
+
+bind "t" "+reload"
+
+
+echo sniper config loaded
