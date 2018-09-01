@@ -1,0 +1,3 @@
+exec common.cfg
+
+bind p "say_team << MILK is ready ! >>"
