@@ -1,0 +1,16 @@
+exec common.cfg
+
+alias +radar "hud_medicautocallers 1; hud_medicautocallersthreshold 150"
+alias -radar "hud_medicautocallers 0; hud_medicautocallersthreshold 66"
+bind "5" "+radar"
+
+bind "mouse3" "+use_action_slot_item"
+
+bind "r" "+reload; +attack3"
+
+alias nogun "gunisoff"
+alias gunisoff "r_drawviewmodel 0; alias nogun gunison"
+alias gunison "r_drawviewmodel 1 gunisoff; alias nogun gunisoff"
+bind "t" "nogun"
+
+bind p "say_team << UBER is ready ! >>"
