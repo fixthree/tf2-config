@@ -74,4 +74,5 @@ alias defaultsapper "slot2; fov_desired 90; r_drawviewmodel 1"
 alias defaultknife "slot3; fov_desired 90; r_drawviewmodel 1"
 alias defaultdisguisekit "slot4; fov_desired 90; r_drawviewmodel 1"
 
+
 echo spy config loaded
