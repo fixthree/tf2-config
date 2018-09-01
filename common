@@ -1,0 +1,49 @@
+developer 1
+echo "default settings loaded"
+developer 0
+
+
+// viewmodel/combination script binds
+bind "0" "slot10"
+bind "1" "slot1"
+bind "2" "slot2"
+bind "3" "slot3"
+bind "4" "slot4"
+bind "5" "slot5"
+bind "6" "slot6"
+bind "q" "lastinv"
+
+
+bind f1 ""
+bind f2 ""
+bind f3 ""
+bind f4 ""
+
+
+// reload and action key
+bind "r" "+use_action_slot_item"
+
+bind "END" "spin"
+alias spin "+startspin"
+alias "+startspin" "cl_yawspeed 900; +right; alias spin -startspin"
+alias "-startspin" "cl_yawspeed 210; -right; alias spin +startspin"
+
+
+// Viewmodel Script
+// middle mouse click to turn viewmodel off
+alias nogun "gunisoff"
+alias gunisoff "r_drawviewmodel 0; alias nogun gunison"
+alias gunison "r_drawviewmodel 1; alias nogun gunisoff"
+bind "mouse3" "nogun"
+
+
+// default mousewheel settings (disabled for now)
+// bind "mwheelup" "invprev"
+// bind "mwheeldown" "invnext"
+bind "mwheelup" ""
+bind "mwheeldown" ""
+
+
+bind p "say_team testing bind 123"
+bind t ""
+bind o say_party
