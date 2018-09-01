@@ -1,0 +1,148 @@
+// video settings for FPS	
+mat_phong 0
+mat_bumpmap 0
+mat_specular 1
+mat_picmip 0
+mat_filtertextures 1
+mat_filterlightmaps 1
+mat_trilinear 0
+mat_viewportscale 1
+mat_vsync 0
+mat_antialias 0
+mat_aaquality 0
+// mat_disable_fancy_blending 1
+mat_force_bloom 0
+tf_particles_disable_weather 1
+r_rimlight 0
+r_worldlights 1 // default is 4
+r_rootlod 1 // default is 0; low is 2
+r_waterforceexpensive 1 
+r_waterforcereflectentities 0
+r_3dsky 0
+
+
+// shadow setting for FPS
+r_shadowmaxrendered 0
+r_shadowrendertotexture 0
+r_shadows 1
+
+
+// gibs settings for FPS
+cl_phys_props_enable 0
+cl_phys_props_max 0
+props_break_max_pieces 0
+r_propsmaxdist 1
+violence_agibs 0
+violence_hgibs 0
+tf_playergib 1 // 1 is gibs on; 0 is gibs off
+
+
+// hitsounds settings
+tf_dingalingaling 1
+tf_dingalingaling_lasthit 1
+tf_dingaling_pitchmaxdmg 60 // should be 60
+tf_dingaling_pitchmindmg 165 // should be 140
+tf_dingaling_volume 2.00
+snd_pitchquality 0 // default is 1
+snd_mixahead .05 // default is 0.1
+
+
+// damage text settings
+hud_combattext 1
+hud_combattext_batching 1
+hud_combattext_batching_window 1.75
+
+
+// net graph settings
+net_graph 1
+net_graphheight 860
+net_graphpos 0
+net_graphproportionalfont 0
+net_graphtext 1
+
+
+// network settings
+cl_updaterate 60
+cl_cmdrate 60
+cl_interp 0.033
+cl_interp_ratio 2
+cl_lagcompensation 1
+cl_pred_optimize 2
+//cl_smooth 1 // 1 is default
+//cl_smoothtime 0.01 // 0.1 is default
+rate 60000 // 30000 is default
+
+
+// fov settings
+fov_desired 90
+viewmodel_fov 90
+
+
+// scoreboard settings
+tf_scoreboard_mouse_mode 2 // 0 = look and shoot; 1 = can't look or shoot; 2 = look and shoot, click to use scoreboard
+tf_scoreboard_ping_as_text 1
+
+
+// color toggler
+alias dotxhaircolor "dotxhaircolorb"
+alias dotxhaircolorb "cl_crosshair_blue 0; cl_crosshair_green 255; cl_crosshair_red 0;alias dotxhaircolor dotxhaircolorc"
+alias dotxhaircolorc "cl_crosshair_blue 0; cl_crosshair_green 255; cl_crosshair_red 255;alias dotxhaircolor dotxhaircolord"
+alias dotxhaircolord "cl_crosshair_blue 240; cl_crosshair_green 255; cl_crosshair_red 0;alias dotxhaircolor dotxhaircolore"
+alias dotxhaircolore "cl_crosshair_blue 85; cl_crosshair_green 55; cl_crosshair_red 255;alias dotxhaircolor dotxhaircolorb"
+
+
+// null-cancelling movement script
+bind w +mfwd
+bind s +mback
+bind a +mleft
+bind d +mright
+
+alias +mfwd "-back;+forward;alias checkfwd +forward;dotxhaircolor"
+alias +mback "-forward;+back;alias checkback +back;dotxhaircolor"
+alias +mleft "-moveright;+moveleft;alias checkleft +moveleft;dotxhaircolor"
+alias +mright "-moveleft;+moveright;alias checkright +moveright;dotxhaircolor"
+alias -mfwd "-forward;checkback;alias checkfwd none;dotxhaircolor"
+alias -mback "-back;checkfwd;alias checkback none;dotxhaircolor"
+alias -mleft "-moveleft;checkright;alias checkleft none;dotxhaircolor"
+alias -mright "-moveright;checkleft;alias checkright none;dotxhaircolor"
+alias checkfwd none
+alias checkback none
+alias checkleft none
+alias checkright none
+alias none ""
+
+
+// easy demos
+// bind key to recdemo, press to record, press again to stop and record next.
+bind BACKSPACE recdemo
+alias recdemo "demo1"
+alias demo1 "stop;record demo1;alias recdemo demo2"
+alias demo2 "stop;record demo2;alias recdemo demo3"
+alias demo3 "stop;record demo3;alias recdemo demo4"
+alias demo4 "stop;record demo4;alias recdemo demo5"
+alias demo5 "stop;record demo5;alias recdemo demo6"
+alias demo5 "stop;record demo6;alias recdemo demo1"
+// when you want to keep a demo, go to your tf folder and rename it so it isnt overwritten
+// the limit before the cycle restarts is 5 as written above, but its fairly obvious how to increase
+
+
+// offline lobby settings
+alias training "tf_use_fixed_weaponspreads 1; tf_damage_disablespread 1; tf_weapon_criticals 0; tf_preround_push_from_damage_enable 1; tf_forced_holiday 0"
+bind / training
+
+
+// taunt binds
+bind "g" "+taunt"
+bind "h" "taunt"
+
+// say "Thanks"
+bind "shift" "voicemenu 0 1"
+
+
+// other
+closecaption 0 // default is 0
+cl_allowdownload 1
+zoom_sensitivity_ratio 0.83333333 // default is 1
+// tf_matchmaking_ping_a 150
+// tf_matchmaking_ping_b 220
+// tf_matchmaking_ping_c 300
