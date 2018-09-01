@@ -1,0 +1,5 @@
+exec common.cfg
+
+bind p "say << Sentry down PUSH ! >>"
+
+// bind t "say << I like shotguns >>"
