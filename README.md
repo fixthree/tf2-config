@@ -9,3 +9,6 @@
 // by fixthree
 
 // paste files (in cfg format) to steamapps/common/Team Fortress 2/tf/cfg
+
+// updated 2021-04-08
+// added mouse4 and mouse5 binds
