@@ -12,3 +12,6 @@
 
 // updated 2021-04-08
 // added mouse4 and mouse5 binds
+
+// updated 2026-03-12
+// changed various fps settings, and added some new commands
